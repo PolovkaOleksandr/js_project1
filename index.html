@@ -1,72 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>jsProject1</title>
+    <title>Гра Динозаврик</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        canvas {
+            border: 1px solid #ccc;
+        }
+        #restartButton {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <header class="header">
-        
-        <img src="./img/Group 4.png" alt="logo" class="header-logo">
-
-    </header>
-    <main>
-        <div class="game1">
-            <h4>Перевір в який рік ти народився</h4>
-            <input type="text" id="inp1">
-            <button class="black-back" id="btn1"><img class="" src="./img/Lupa.png" alt="lupa"></button>
-            <p id="p1"></p>
-        </div>
-
-        <div class="game2">
-            <h4>Вгадай число, яке загадав комп’ютер</h4>
-            <input type="text" id="inp2">
-            <button class="black-back" id="btn2"><img src="./img/Lupa.png" alt="lupa"></button>
-            <p id="p2"></p>
-        </div>
-
-        <div class="game3">
-            <h4>Камінь - ножиці - папір</h4>
-            <button class="black-back" id="btn31"><img class="game3-btn-img" src="./img/stone 1.png" alt="stone"></button>
-            <button class="black-back" id="btn32"><img class="game3-btn-img" src="./img/scissors 1.png" alt="scissors"></button>
-            <button class="black-back" id="btn33"><img class="game3-btn-img" src="./img/paper 1.png" alt="paper"></button>
-            <p id="p3">Ви виграли раунд!</p>
-            <div class="div-comp-3"><p id="var-comp3">Варіант комп’ютера</p></div>
-            <div class="rax">
-                <p class="rax-p">Рахунок:</p>
-                <p class="p-rax-comp3">Комп’ютер - <span id="rax-comp3">0</span></p>
-                <p class="p-rax-user3">Ви - <span id="rax-user3">0</span></p>
-            </div>
-        </div>
-
-        <div class="game4">
-            <h4>Калькулятор</h4>
-            <div class="flex">
-            <input type="text" id="number1">
-
-            <button class="black-back white" id="plus">+</button>
-            <button class="black-back white" id="minus">-</button>
-            <button class="black-back white" id="mnog">*</button>
-            <button class="black-back white" id="dilen">/</button>
-            
-            <input type="text" id="number2">
-            <button class="black-back white " id="dorivn">=</button>
-
-            <p id="result4">result</p>
-        </div>
-        </div>
-
-
-    </main>
-    <footer>
-
-    </footer>
-    <script src="./js/game1.js"></script>
-    <script src="./js/game2.js" type="module"></script>
-    <script src="./js/game3.js" type="module"></script>
-    <script src="./js/game4.js" type="module"></script>
+    <canvas id="gameCanvas" width="800" height="200"></canvas>
+    <button id="restartButton">Переграти</button>
+    <img id="dinoImage" src="./coin-yen.svg" alt="Динозавр" style="display:none;">
+    <img id="cactusImage" src="./images-removebg-preview.svg" alt="Кактус" style="display:none;">
+    <script src="./game6.js"></script>
 </body>
 </html>
