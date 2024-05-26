@@ -53,6 +53,9 @@ function dorivnClick(){
     else if (dorivn.classList.contains("mnog")){
         p4.textContent=Number(number1.value)*Number(number2.value)
         console.log(1)}
+        if (Number(number1.value)*Number(number2.value)==Infinity){
+            console.log("Бесконечность не предел")
+        }
     else if (dorivn.classList.contains("dilen")){
         p4.textContent=Number(number1.value)/Number(number2.value)
         console.log(1)}

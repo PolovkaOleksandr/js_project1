@@ -1,5 +1,6 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
+const startButton = document.getElementById('startButton');
 const restartButton = document.getElementById('restartButton');
 const dinoImage = document.getElementById('dinoImage');
 const cactusImage = document.getElementById('cactusImage');
@@ -9,30 +10,32 @@ let dino, cactus, isGameOver, score, scoreInterval;
 function init() {
     dino = {
         x: 50,
-        y: 150,
-        width: 50,
-        height: 50,
+        y: 260,
+        width: 70,
+        height: 70,
         dy: 0,
         gravity: 0.5,
-        jumpPower: -10,
+        jumpPower: -15,
         isJumping: false
     };
 
     cactus = {
         x: canvas.width,
-        y: 150,
-        width: 40,
-        height: 50,
+        y: 260,
+        width: 60,
+        height: 70,
         speed: 5
     };
 
     isGameOver = false;
     score = 0;
     restartButton.style.display = 'none';
+    startButton.style.display = 'none';
+    canvas.style.display = 'block';
     if (scoreInterval) clearInterval(scoreInterval);
     scoreInterval = setInterval(() => {
         if (!isGameOver) score++;
-    }, 10); // збільшуємо рахунок кожні 100 мс
+    }, 5); // збільшуємо рахунок кожні 100 мс
 }
 
 function drawDino() {
@@ -46,7 +49,7 @@ function drawCactus() {
 function drawScore() {
     ctx.fillStyle = 'black';
     ctx.font = '20px Arial';
-    ctx.fillText(`Курс єни: ${score} грн`, 10, 30);
+    ctx.fillText(`Артемовий кредит у єнах: ${score}`, 10, 30);
 }
 
 function updateDino() {
@@ -84,7 +87,7 @@ function gameLoop() {
     if (isGameOver) {
         ctx.fillStyle = 'red';
         ctx.font = '48px Arial';
-        ctx.fillText('Гру завершено', 200, 100);
+        // ctx.fillText('Гру завершено', 200, 100);
         restartButton.style.display = 'block';
         return;
     }
@@ -108,10 +111,23 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+startButton.addEventListener('click', () => {
+    startButton.style.display = 'none';
+    init();
+    gameLoop();
+});
+
 restartButton.addEventListener('click', () => {
     init();
     gameLoop();
 });
 
-init();
-gameLoop();
+// Після завантаження сторінки показуємо кнопку "Почати гру"
+window.onload = () => {
+    startButton.style.display = 'block';
+};
+window.addEventListener('keydown', (e) => {  
+    if (e.keyCode === 32 && e.target === document.body) {  
+      e.preventDefault();  
+    }  
+  });
