@@ -75,7 +75,7 @@ const scientists = [
         born: 1878, 
         dead: 1968, 
         id: 11 
-    } , 
+    } ,  
     { 
         name: "Hamster", 
         surname: "Combat", 
