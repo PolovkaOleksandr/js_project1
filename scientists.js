@@ -82,7 +82,7 @@ const scientists = [
         born: 2024, 
         dead: 0, 
         id: 12 
-    }
+    } 
 ];
 
     let btn19st=document.querySelector(".btn19st");
