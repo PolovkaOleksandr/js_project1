@@ -73,3 +73,4 @@ window.addEventListener('keydown', (e) => {
       e.preventDefault();  
     }  
   });
+//const лошпэд=гарна людина

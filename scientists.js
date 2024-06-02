@@ -4,7 +4,7 @@ const scientists = [
         surname: "Einstein", 
         born: 1879, 
         dead: 1955, 
-        id: 1 
+        id: 1
     } , 
     { 
         name: "Isaac", 
@@ -80,7 +80,7 @@ const scientists = [
         name: "Hamster", 
         surname: "Combat", 
         born: 2024, 
-        dead: 0, 
+        dead: Infinity, 
         id: 12 
     } 
 ];
@@ -91,6 +91,14 @@ const scientists = [
     btnAE.addEventListener("click", AEborn );
     let btnAlf=document.querySelector(".btnAlf");
     btnAlf.addEventListener("click", sortAlf );
+    let btnC=document.querySelector(".btnC");
+    btnC.addEventListener("click", scienC );
+    let btnVik=document.querySelector(".btnVik");
+    btnVik.addEventListener("click", sortVik );
+    let btnA=document.querySelector(".btnA");
+    btnA.addEventListener("click", delA );
+    let btnNayp=document.querySelector(".btnNayp");
+    btnNayp.addEventListener("click", findNayp );
 
         const listElement = document.querySelector('.ss-list');
 
@@ -122,3 +130,44 @@ function sortAlf() {
         listElement.appendChild(listItem);
 }
 
+//Знайти вчених, прізвища яких починаються на на літеру “С” 
+function scienC () {
+    listElement.textContent="" ;
+    const cFind=scientists.filter(scientist=>scientist.surname.startsWith("C")).forEach(scientist => {
+    let listItem = document.createElement('li');
+        listItem.textContent = `${scientist.name} ${scientist.surname} (born ${scientist.born}, died ${scientist.dead})`;
+        listElement.appendChild(listItem);
+    
+})}
+// Відсортувати вчених за кількістю прожитих років
+function sortVik() {
+    listElement.textContent="" ;
+    const sortedByAge = scientists.slice().sort((a, b) => (b.dead - b.born) - (a.dead - a.born)).forEach(scientist=>{
+
+    let listItem = document.createElement('li');
+        listItem.textContent = `${scientist.name} ${scientist.surname} (born ${scientist.born}, died ${scientist.dead})`
+        listElement.appendChild(listItem);
+        })
+}
+// Видалити всіх вчених, ім’я яких починається на “А”
+function delA () {
+    listElement.textContent="" ;
+    const AFind=scientists.filter(scientist=>!scientist.name.startsWith("A")).forEach(scientist => {
+    let listItem = document.createElement('li');
+        listItem.textContent = `${scientist.name} ${scientist.surname} (born ${scientist.born}, died ${scientist.dead})`;
+        listElement.appendChild(listItem);
+    
+})
+}
+//Знайти вченого, який народився найпізніше
+function findNayp () {
+    listElement.textContent="" ;
+    let max = scientists.reduce(function(acc, currentValue) {
+        return currentValue.born > acc.born ? currentValue : acc;
+    }, scientists[0]);
+    let listItem = document.createElement('li');
+        listItem.textContent = `${max.name} ${max.surname} (born ${max.born}, died ${max.dead})`;
+        listElement.appendChild(listItem);
+    
+
+}
