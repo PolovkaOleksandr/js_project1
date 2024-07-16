@@ -5,10 +5,10 @@ const p=document.querySelector("#p2")
 btn.addEventListener("click", gameClick)
 function gameClick(){
     if (Number(input.value)==Math.round(Math.random()*100 )){
-        p.textContent="Ви народилися у вгадане число"
+        p.textContent="Ви вгадали число"
         
     }
     else{
-        p.textContent="Ви народилися не у вгадане число"
+        p.textContent="Ви не вгадали число"
     }
 }
