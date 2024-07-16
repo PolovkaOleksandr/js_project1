@@ -49,7 +49,7 @@ function drawCactus() {
 function drawScore() {
     ctx.fillStyle = 'black';
     ctx.font = '20px Arial';
-    ctx.fillText(`Артемовий кредит у єнах: ${score}`, 10, 30);
+    ctx.fillText(`Курс єни до гривні: ${score}`, 10, 30);
 }
 
 function updateDino() {
