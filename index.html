@@ -26,14 +26,14 @@
         #startButton {
             display: block;
         }
-        .buttons {
+         .buttons {
             margin-bottom: 20px;
         }
         button {
             margin: 0 10px;
             padding: 10px 20px;
-            font-size: 16px;
-        }
+            font-size: 16px; 
+        } 
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
@@ -46,7 +46,7 @@
 
     </header>
     <main>
-        <div class="game1">
+        <div class="game1" style="margin-top: 60px;">
             <h4>Перевір в який рік ти народився</h4>
             <input type="text" id="inp1">
             <button class="black-back" id="btn1"><img class="" src="./img/Lupa.png" alt="lupa"></button>
@@ -54,7 +54,7 @@
         </div>
 
         <div class="game2">
-            <h4>Вгадай число, яке загадав комп’ютер</h4>
+            <h4>Вгадай число, яке загадав комп’ютер від 1 до 10</h4>
             <input type="text" id="inp2">
             <button class="black-back" id="btn2"><img src="./img/Lupa.png" alt="lupa"></button>
             <p id="p2"></p>
@@ -123,11 +123,11 @@
 
         <div class="game8">
             <h3>Напиши три числа</h3>
-            <input type="number" class="calc-inp 3NumsInp" placeholder="Число1" id="NumsNum1" />
-            <input type="number" class="calc-inp 3NumsInp" placeholder="Число2" id="NumsNum2" />
-            <input type="number" class="calc-inp 3NumsInp" placeholder="Число3" id="NumsNum3" />
+            <input type="number" class="calc-inp 3NumsInp" placeholder="   Число1" id="NumsNum1" />
+            <input type="number" class="calc-inp 3NumsInp" placeholder="   Число2" id="NumsNum2" />
+            <input type="number" class="calc-inp 3NumsInp" placeholder="   Число3" id="NumsNum3" />
             <button class=" btn-nums3">Перевірити</button>
-            <p class="NumsAnswer">Та напиши вже</p>
+            <p class="NumsAnswer"></p>
 
  
         </div>
@@ -157,20 +157,20 @@
                     </div>
                 </div>
             </div>
-            <button class="prev btn-slider">&#10094;</button>
-            <button class="next btn-slider">&#10095;</button>
+            <button class="prev btn-slider btns">&#10094;</button>
+            <button class="next btn-slider btns">&#10095;</button>
         </div>
         <div class="scientists">
             <div class="ss-list">
 
             </div> 
-            <button class="btn19st">Які вчені народилися в 19 ст.</button>
-            <button class="btnAE">Знайти рік народження Albert Einshtein</button>
-            <button class="btnAlf">Відсортувати вчених за алфавітом</button>
-            <button class="btnC">Знайти вчених, прізвища яких починаються на на літеру “С” </button>
-            <button class="btnVik">Відсортувати вчених за кількістю прожитих років</button>
-            <button class="btnA">Видалити всіх вчених, ім’я яких починається на “А”</button>
-            <button class="btnNayp">Знайти вченого, який народився найпізніше</button>
+            <button class="btn19st btns">Які вчені народилися в 19 ст.</button>
+            <button class="btnAE btns">Знайти рік народження Albert Einshtein</button>
+            <button class="btnAlf btns">Відсортувати вчених за алфавітом</button>
+            <button class="btnC btns">Знайти вчених, прізвища яких починаються на на літеру “С” </button>
+            <button class="btnVik btns">Відсортувати вчених за кількістю прожитих років</button>
+            <button class="btnA btns">Видалити всіх вчених, ім’я яких починається на “А”</button>
+            <button class="btnNayp btns">Знайти вченого, який народився найпізніше</button>
 
 
         </div>

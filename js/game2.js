@@ -4,7 +4,7 @@ const p=document.querySelector("#p2")
 
 btn.addEventListener("click", gameClick)
 function gameClick(){
-    if (Number(input.value)==Math.round(Math.random()*100 )){
+    if (Number(input.value)==Math.round(Math.random()*10 )){
         p.textContent="Ви вгадали число"
         
     }

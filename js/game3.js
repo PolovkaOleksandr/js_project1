@@ -14,6 +14,7 @@ let Random=0
 btnCam.addEventListener("click", gameClickCam)//1
 btnNog.addEventListener("click", gameClickNog)//2
 btnPap.addEventListener("click", gameClickPap)//3
+pRes.textContent=""
 
 function gameClickCam(){
     Random=Math.floor(Math.random() * 3)+1
