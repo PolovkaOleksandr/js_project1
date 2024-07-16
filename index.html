@@ -35,13 +35,14 @@
             font-size: 16px;
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>jsProject1</title>
 </head>
 <body>
     <header class="header">
         
-        <img src="./img/Group 4.png" alt="logo" class="header-logo">
+        <a href=""><img src="./img/Group 4.png" alt="logo" class="header-logo"></a>
 
     </header>
     <main>
@@ -93,13 +94,14 @@
         <div class="game5">
             <div class="calc-time-box">
                 <div class="calc-time-inp-box">
+                    <p class="calc-time-p">Калькулятор часу з секунд</p>
                   <input type="number" placeholder="секунди" class="calc-time-inp calc-inp calc-time-inp" />
                   <button class="calc-time-inp-btn btn btn-dark btn-rounded-lupa">
                     <img class="" src="./partials/games/lupa.png" alt="" />
                   </button>
                 </div>
                 <hr class="dotted-line mamka-clauda" />
-                <p class="calc-time-text">введіть кийсь мусор і валіть далі</p>
+                
               </div>
         </div>
 
@@ -121,9 +123,9 @@
 
         <div class="game8">
             <h3>Напиши три числа</h3>
-            <input type="number" class="calc-inp 3NumsInp" placeholder="" id="NumsNum1" />
-            <input type="number" class="calc-inp 3NumsInp" placeholder="" id="NumsNum2" />
-            <input type="number" class="calc-inp 3NumsInp" placeholder="Чєркані цифру, Хомяк" id="NumsNum3" />
+            <input type="number" class="calc-inp 3NumsInp" placeholder="Число1" id="NumsNum1" />
+            <input type="number" class="calc-inp 3NumsInp" placeholder="Число2" id="NumsNum2" />
+            <input type="number" class="calc-inp 3NumsInp" placeholder="Число3" id="NumsNum3" />
             <button class=" btn-nums3">Перевірити</button>
             <p class="NumsAnswer">Та напиши вже</p>
 
@@ -186,6 +188,7 @@
     <script src="./js/game8.js" type="module"></script>
     <script src="./slider.js" type="module"></script>
     <script src="./scientists.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 </body>

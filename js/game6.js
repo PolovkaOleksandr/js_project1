@@ -14,7 +14,7 @@ function init() {
         width: 70,
         height: 70,
         dy: 0,
-        gravity: 0.5,
+        gravity: 0.6,
         jumpPower: -15,
         isJumping: false
     };

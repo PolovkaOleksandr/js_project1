@@ -51,7 +51,9 @@ body{
     border-radius: 50%;
     font-size: 18px;
 }
-
+btn{
+    border-radius: 2px;
+}
 .prev {
     left: 10px;
 }
@@ -63,3 +65,15 @@ body{
     width: 30px;
     height: 30px;
 }
+/* .game1,.game2 {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 10vh; 
+    margin: 0 auto;
+}*/
+/* .game1,.game2,.game3,.game4{
+    width: 350px;
+    margin: 0 auto;
+} */
+
