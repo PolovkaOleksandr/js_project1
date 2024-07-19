@@ -379,9 +379,9 @@ btn{
 .btn_g3:hover{
     background-color: #555 !important ;
 }
-.btn_g4:hover{
+/* .btn_g4:hover{
   background-color: #555;
-}
+} */
 .btn_g3{
   border-radius: 5px;
 }
@@ -429,4 +429,7 @@ btn{
 } */
 .btn_g3:hover, .btn_g3:hover .game3-btn-img {
   background-color: black;
+}
+.highlighted {
+  background-color: black !important;
 }
