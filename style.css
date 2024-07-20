@@ -369,16 +369,16 @@ btn{
     height: 2em; /* 2 times the parent element's font size */
     margin-bottom: 0px;
   }
-.btn_g3:active{
+/* .btn_g3:active{
   background-color: black ;
-}
+}*/
 .btn_g3{
   background-color: black !important ;
-}
+} 
 
-.btn_g3:hover{
+/* .btn_g3:hover{
     background-color: #555 !important ;
-}
+} */
 /* .btn_g4:hover{
   background-color: #555;
 } */
@@ -427,9 +427,12 @@ btn{
 /* .game3-btn-img:hover{
   background-color: #555 !important ;
 } */
-.btn_g3:hover, .btn_g3:hover .game3-btn-img {
-  background-color: black;
-}
+
 .highlighted {
   background-color: black !important;
+}
+.btn_g3:hover, .btn_g3:hover .game3-btn-img {
+  /* add your hover styles here */
+  background-color: #5555; /* example hover style */
+  cursor: pointer;
 }
